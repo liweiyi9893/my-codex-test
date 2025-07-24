@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ComfyUI Demo</title>
+</head>
+<body>
+    <h1>Generate Image</h1>
+    <form method="post">
+        <input type="text" name="keyword" placeholder="Enter prompt" required>
+        <button type="submit">Generate</button>
+    </form>
+    {% if image_url %}
+    <div>
+        <h2>Result</h2>
+        <img src="{{ image_url }}" alt="generated image">
+    </div>
+    {% endif %}
+</body>
+</html>
